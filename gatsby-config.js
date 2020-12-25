@@ -11,6 +11,7 @@ module.exports = {
       twitter: `itsrobli`,
     },
   },
+  pathPrefix: `/co-robli-dev`,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
