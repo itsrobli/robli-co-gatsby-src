@@ -5,8 +5,8 @@ module.exports = {
       name: `Robert Li`,
       summary: `This website is published by me, Robert Li.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `Robert Li.`,
+    siteUrl: `https://robli.co/`,
     social: {
       twitter: `itsrobli`,
     },
@@ -74,8 +74,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Rob Li.co`,
+        short_name: `co-robli`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#fc7e0f`,
