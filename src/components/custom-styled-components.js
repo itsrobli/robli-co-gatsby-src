@@ -22,3 +22,17 @@ export const BackToPhotosButton = styled.a`
   }
 
 `
+
+export const PhotosListCategoryLabel = styled.span`
+
+  color: #888;
+  border-bottom: none;
+  text-decoration: none;
+  font-size: 85%;
+  text-align: right;
+  &:hover,
+  &:active,
+  &:focus {
+    font-weight: 500;
+  }
+`

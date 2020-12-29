@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { BackToPhotosButton } from "../components/button-back-to-photos"
+import { BackToPhotosButton } from "./custom-styled-components"
 import { Container } from "react-bootstrap"
 
 const Layout = ({ location, title, children }) => {

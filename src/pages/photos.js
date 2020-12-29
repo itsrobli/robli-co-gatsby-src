@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import PhotosManifest from "../../content/photos/photos-manifest.yaml"
+import { PhotosListCategoryLabel } from "../components/custom-styled-components"
 import { Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
 
@@ -26,9 +27,16 @@ const PhotosList = ({ data, location }) => {
 
           </Col>
         </Row>
-            {PhotosManifest.map((data, index) => {
-              return <Row key={`content_item_${index}`}>{data.title + " " + data.category}</Row>
-            })}
+
+        {PhotosManifest.map((data, index) => {
+          return (
+            <Link to={`/photos/${data.title}`}>
+              <Row key={`content_item_${index}`}>{data.title}
+                <PhotosListCategoryLabel>{data.category}</PhotosListCategoryLabel>
+              </Row>
+            </Link>
+          )
+        })}
       </div>
     </Layout>
   )
