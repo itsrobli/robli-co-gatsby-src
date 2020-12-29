@@ -5,5 +5,5 @@ description: France
 category: Travel
 id: 3
 thumbnail: "./france_sep_2012_thumbnail.jpg"
-filesystem_directory: "japan_sep_2015"
+filesystem_directory: "france-sep-2012"
 ---

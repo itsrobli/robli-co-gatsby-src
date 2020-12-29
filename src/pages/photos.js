@@ -45,7 +45,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/photos/"}}, sort: {fields: [frontmatter___id, frontmatter___date], order: DESC}) {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/photos/"}}, sort: {fields: [frontmatter___id, frontmatter___date], order: ASC}) {
       nodes {
         excerpt
         fields {

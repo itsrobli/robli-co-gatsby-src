@@ -28,6 +28,7 @@ export const PhotosListCategoryLabel = styled.span`
 
   color: #888;
   border-bottom: none;
+  padding-left: 0.5em;
   text-decoration: none;
   font-size: 85%;
   text-align: right;
