@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { BackToPhotosButton } from "../components/button-back-to-photos"
+import { Container } from "react-bootstrap"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -22,16 +23,18 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
-      <main>{children}</main>
-      <BackToPhotosButton href="https://robli.co/photos/">Hi</BackToPhotosButton>
-      <footer>
-        © 2010 - {new Date().getFullYear()} Robert Li
-        {` `}
-        <a href="https://www.gatsbyjs.com">Privacy Policy</a>
-      </footer>
-    </div>
+    <Container>
+      <div className="global-wrapper" data-is-root-path={isRootPath}>
+        <header className="global-header">{header}</header>
+        <main>{children}</main>
+        <BackToPhotosButton href="https://robli.co/photos/">Hi</BackToPhotosButton>
+        <footer>
+          © 2010 - {new Date().getFullYear()} Robert Li
+          {` `}
+          <a href="https://www.gatsbyjs.com">Privacy Policy</a>
+        </footer>
+      </div>
+    </Container>
   )
 }
 
