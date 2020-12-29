@@ -47,5 +47,8 @@ export const PhotosListStyledLink = styled(Link)`
   &:focus {
     border-bottom: none;
   }
+  &:hover {
+    font-weight: 500;
+  }
 
 `

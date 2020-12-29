@@ -1,47 +1,34 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import PhotosManifest from "../../content/photos/photos-manifest.yaml"
 import { PhotosListCategoryLabel, PhotosListStyledLink } from "../components/custom-styled-components"
 import { Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
 import Image from "gatsby-image"
+import SEO from "../components/seo"
 
 
 const PhotosList = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const photosManifest = data.allMarkdownRemark.nodes
   return (
     <Layout location={location} title={siteTitle}>
+      <SEO title="Photos" />
       <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
-        <h1>{PhotosManifest.title}</h1>
-        <ul>
-          {PhotosManifest.map((data, index) => {
-            return <li key={`content_item_${index}`}>{data.title + " " + data.category}</li>
-          })}
-        </ul>
+        <h1>Photos</h1>
         <Row>
-          <Col xs={12}>
-
-            {PhotosManifest.map((data, index) => {
-              return <li key={`content_item_${index}`}>{data.title + " " + data.category}</li>
-            })}
-
-          </Col>
-        </Row>
-        <Row>
-          {PhotosManifest.map((data, index) => {
+          {photosManifest.map(photoCollection => {
             return (
-              <PhotosListStyledLink to={`/photos/${data.title}`}>
-                <Col Col xs={4} key={`content_item_${index}`}>
-                  <img src={`./${data.filesystem_directory}/${data.filesystem_directory}_thumbnail.jpg`}></img>
-                  {data.title}
-                  <PhotosListCategoryLabel>{data.category}</PhotosListCategoryLabel>
+              <PhotosListStyledLink to={`/photos/${photoCollection.frontmatter.title}`}>
+                <Col xs={4}>
+                  <Image fluid={photoCollection.frontmatter.thumbnail.childImageSharp.fluid} />
+                  {photoCollection.frontmatter.title}
+                  <PhotosListCategoryLabel>{photoCollection.frontmatter.category}</PhotosListCategoryLabel>
                 </Col>
               </PhotosListStyledLink>
             )
           })}
         </Row>
-
 
 
       </div>
@@ -69,6 +56,15 @@ export const pageQuery = graphql`
           title
           description
           id
+          category
+          thumbnail {
+            publicURL
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
