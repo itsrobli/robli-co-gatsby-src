@@ -58,7 +58,7 @@ export const pageQuery = graphql`
         title
       }
     }
-  allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/photos/"}}, sort: {fields: [frontmatter___id, frontmatter___date], order: DESC}) {
       nodes {
         excerpt
         fields {
@@ -68,6 +68,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          id
         }
       }
     }
