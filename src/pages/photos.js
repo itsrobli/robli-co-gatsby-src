@@ -2,9 +2,10 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import PhotosManifest from "../../content/photos/photos-manifest.yaml"
-import { PhotosListCategoryLabel } from "../components/custom-styled-components"
+import { PhotosListCategoryLabel, PhotosListStyledLink } from "../components/custom-styled-components"
 import { Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
+import Image from "gatsby-image"
 
 
 const PhotosList = ({ data, location }) => {
@@ -19,7 +20,7 @@ const PhotosList = ({ data, location }) => {
           })}
         </ul>
         <Row>
-          <Col xs={4}>
+          <Col xs={12}>
 
             {PhotosManifest.map((data, index) => {
               return <li key={`content_item_${index}`}>{data.title + " " + data.category}</li>
@@ -27,16 +28,22 @@ const PhotosList = ({ data, location }) => {
 
           </Col>
         </Row>
+        <Row>
+          {PhotosManifest.map((data, index) => {
+            return (
+              <PhotosListStyledLink to={`/photos/${data.title}`}>
+                <Col Col xs={4} key={`content_item_${index}`}>
+                  <img src={`./${data.filesystem_directory}/${data.filesystem_directory}_thumbnail.jpg`}></img>
+                  {data.title}
+                  <PhotosListCategoryLabel>{data.category}</PhotosListCategoryLabel>
+                </Col>
+              </PhotosListStyledLink>
+            )
+          })}
+        </Row>
 
-        {PhotosManifest.map((data, index) => {
-          return (
-            <Link to={`/photos/${data.title}`}>
-              <Row key={`content_item_${index}`}>{data.title}
-                <PhotosListCategoryLabel>{data.category}</PhotosListCategoryLabel>
-              </Row>
-            </Link>
-          )
-        })}
+
+
       </div>
     </Layout>
   )
@@ -51,7 +58,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+  allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         excerpt
         fields {

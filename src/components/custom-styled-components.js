@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 export const BackToPhotosButton = styled.a`
 
@@ -35,4 +36,16 @@ export const PhotosListCategoryLabel = styled.span`
   &:focus {
     font-weight: 500;
   }
+
+`
+
+export const PhotosListStyledLink = styled(Link)`
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    border-bottom: none;
+  }
+
 `
