@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
+
 export const BackToPhotosButton = styled.a`
 
   text-transform: uppercase;
@@ -24,6 +25,19 @@ export const BackToPhotosButton = styled.a`
 
 `
 
+export const PhotosListTile = styled.div`
+
+  padding-bottom: 30px;
+  //padding-left: 10px;
+  //padding-right: 10px;
+
+`
+export const PhotosListSpacer10px = styled.div`
+
+  padding-bottom: 10px;
+
+`
+
 export const PhotosListCategoryLabel = styled.span`
 
   color: #888;
@@ -41,7 +55,7 @@ export const PhotosListCategoryLabel = styled.span`
 `
 
 export const PhotosListStyledLink = styled(Link)`
-
+  
   &,
   &:hover,
   &:active,

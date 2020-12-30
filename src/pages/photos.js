@@ -1,7 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import { PhotosListCategoryLabel, PhotosListStyledLink } from "../components/custom-styled-components"
+import {
+  PhotosListCategoryLabel, PhotosListSpacer10px,
+  PhotosListStyledLink,
+  PhotosListTile
+} from "../components/custom-styled-components"
 import { Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
 import Image from "gatsby-image"
@@ -20,13 +24,16 @@ const PhotosList = ({ data, location }) => {
           {photosManifest.map((photoCollection, key) => {
             return (
               <Col xs={4} key={key}>
-                <PhotosListStyledLink to={`/photos/${photoCollection.frontmatter.title}`}>
+                <PhotosListTile>
+                  <PhotosListStyledLink to={`/photos/${photoCollection.frontmatter.title}`}>
 
                     <Image fluid={photoCollection.frontmatter.thumbnail.childImageSharp.fluid} />
+                    <PhotosListSpacer10px />
                     {photoCollection.frontmatter.title}
                     <PhotosListCategoryLabel>{photoCollection.frontmatter.category}</PhotosListCategoryLabel>
 
-                </PhotosListStyledLink>
+                  </PhotosListStyledLink>
+                </PhotosListTile>
               </Col>
             )
           })}
