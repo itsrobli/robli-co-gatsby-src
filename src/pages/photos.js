@@ -14,24 +14,26 @@ const PhotosList = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Photos" />
-      <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
+      {/*<div style={{ maxWidth: `960px`, margin: `1.45rem` }}>*/}
         <h1>Photos</h1>
         <Row>
-          {photosManifest.map(photoCollection => {
+          {photosManifest.map((photoCollection, key) => {
             return (
-              <PhotosListStyledLink to={`/photos/${photoCollection.frontmatter.title}`}>
-                <Col xs={4}>
-                  <Image fluid={photoCollection.frontmatter.thumbnail.childImageSharp.fluid} />
-                  {photoCollection.frontmatter.title}
-                  <PhotosListCategoryLabel>{photoCollection.frontmatter.category}</PhotosListCategoryLabel>
-                </Col>
-              </PhotosListStyledLink>
+              <Col xs={4} key={key}>
+                <PhotosListStyledLink to={`/photos/${photoCollection.frontmatter.title}`}>
+
+                    <Image fluid={photoCollection.frontmatter.thumbnail.childImageSharp.fluid} />
+                    {photoCollection.frontmatter.title}
+                    <PhotosListCategoryLabel>{photoCollection.frontmatter.category}</PhotosListCategoryLabel>
+
+                </PhotosListStyledLink>
+              </Col>
             )
           })}
         </Row>
 
 
-      </div>
+      {/*</div>*/}
     </Layout>
   )
 }
