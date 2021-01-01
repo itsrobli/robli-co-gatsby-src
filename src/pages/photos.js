@@ -25,7 +25,7 @@ const PhotosList = ({ data, location }) => {
             return (
               <Col xs={4} key={key}>
                 <PhotosListTile>
-                  <PhotosListStyledLink to={`/photos/${photoCollection.frontmatter.title}`}>
+                  <PhotosListStyledLink to={`/photos${photoCollection.fields.slug}`}>
 
                     <Image fluid={photoCollection.frontmatter.thumbnail.childImageSharp.fluid} />
                     <PhotosListSpacer10px />
