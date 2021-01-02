@@ -6,14 +6,27 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const photoCollection = path.resolve(`./src/templates/photo-collection.js`)
+
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
       {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
+        posts: allMarkdownRemark(
+          filter: {fileAbsolutePath: {regex: "/content/blog/"}}, 
+          sort: {fields: [frontmatter___date], order: DESC}
+        ) {
+          nodes {
+            id
+            fields {
+              slug
+            }
+          }
+        }
+        photos: allMarkdownRemark(
+          filter: {fileAbsolutePath: {regex: "/content/photos/"}}, 
+          sort: {fields: [frontmatter___id, frontmatter___date], order: ASC}
         ) {
           nodes {
             id
@@ -34,7 +47,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.allMarkdownRemark.nodes
+  const posts = result.data.posts.nodes
+  const photos = result.data.photos.nodes
+
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
@@ -53,6 +68,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           previousPostId,
           nextPostId,
         },
+      })
+    })
+  } else if (photos.length > 0) {
+    photos.forEach((photo, index) => {
+      const previousPostId = index === 0 ? null : photos[index - 1].id
+      const nextPostId = index === photos.length - 1 ? null : photos[index + 1].id
+
+      createPage({
+        path: photo.fields.slug,
+        component: photoCollection,
+        context: {
+          id: photo.id,
+          previousPostId,
+          nextPostId
+        }
       })
     })
   }
