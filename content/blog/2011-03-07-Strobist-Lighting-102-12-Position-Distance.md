@@ -18,21 +18,21 @@ The main lesson from this was that you control lighting "depth of field" by vary
 
 <p>
     <figure>
-        <img src="/images/2011/03/2011-03-07-at-22-58-03-_dsc0851.jpg">
+        <img src="/images/2011/03/2011-03-07-at-22-58-03-_dsc0851.jpg" />
         <figcaption>Subject and background relatively close together when considering distance from flash</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="/images/2011/03/2011-03-07-at-22-58-24-_dsc0852.jpg">
+        <img src="/images/2011/03/2011-03-07-at-22-58-24-_dsc0852.jpg" />
         <figcaption>Subject and background becoming relatively further apart</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="/images/2011/03/2011-03-07-at-22-58-36-_dsc0853.jpg">
+        <img src="/images/2011/03/2011-03-07-at-22-58-36-_dsc0853.jpg" />
         <figcaption>Subject and background relatively far apart</figcaption>
     </figure>
 </p>

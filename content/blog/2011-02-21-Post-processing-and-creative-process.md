@@ -18,7 +18,7 @@ I was asked by a friend to turn the photo below into black and white and that th
 
 <p>
     <figure>
-        <img src="/images/2011/02/p4023089_orig.jpg">
+        <img src="/images/2011/02/p4023089_orig.jpg" />
         <figcaption>Original</figcaption>
     </figure>
 </p>
@@ -29,7 +29,7 @@ However, I felt the image could be further improved.  I did some levels/curves 
 
 <p>
     <figure>
-        <img src="/images/2011/02/p4023089_red-bw-v2.jpg">
+        <img src="/images/2011/02/p4023089_red-bw-v2.jpg" />
         <figcaption>Better</figcaption>
     </figure>
 </p>
@@ -38,7 +38,7 @@ However, looking at the original image, I didn't think B/W was necessarily the
 
 <p>
     <figure>
-        <img src="/images/2011/02/p4023089_colour-copy.jpg">
+        <img src="/images/2011/02/p4023089_colour-copy.jpg" />
         <figcaption>Creative</figcaption>
     </figure>
 </p>

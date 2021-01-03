@@ -9,7 +9,7 @@ tags:
 
 <p>
     <figure>
-        <img src="/images/2012/12/Image2_blur_noise.jpg">
+        <img src="/images/2012/12/Image2_blur_noise.jpg" />
         <figcaption>Bad camera?</figcaption>
     </figure>
 </p>
@@ -84,7 +84,7 @@ For some novelty, you might also want to find a camera with a “slow shutter sy
 
 <p>
     <figure>
-        <img src="/images/2012/12/Image3_onken_110320_NYCfun_082.jpg">
+        <img src="/images/2012/12/Image3_onken_110320_NYCfun_082.jpg" />
         <figcaption>Photo credit: Nick Onken</figcaption>
     </figure>
 </p>
@@ -207,7 +207,7 @@ Take a look at what [Jeremy Cowart][32] has been able to achieve with an iPhone 
 
 <p>
     <figure>
-        <img src="/images/2012/12/Image4_Cowart-copy.jpg">
+        <img src="/images/2012/12/Image4_Cowart-copy.jpg" />
         <figcaption>iPhone photos by Jeremy Cowart</figcaption>
     </figure>
 </p>

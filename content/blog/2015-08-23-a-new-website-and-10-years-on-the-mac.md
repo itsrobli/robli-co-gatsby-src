@@ -109,7 +109,7 @@ I also finally have a [place for my photos][24] that I’m fairly happy with. Ir
 
 I will be adding progressively to this as well.
 
-<img class="img-hero" src="http://robli.co/images/2015/08/roblico-photos-section-combined.jpg">
+<img class="img-hero" src="/images/2015/08/roblico-photos-section-combined.jpg" />
 
 
 
@@ -154,4 +154,4 @@ I will be adding progressively to this as well.
 [25]:	http://robli.co/images/2015/08/roblico-photos-section-combined.jpg
 
 [image-1]:	http://robli.co/images/2015/08/smh-trackers.png
-[image-2]:	http://robli.co/images/2015/08/roblico-about-section.png
+[image-2]:	/images/2015/08/roblico-about-section.png

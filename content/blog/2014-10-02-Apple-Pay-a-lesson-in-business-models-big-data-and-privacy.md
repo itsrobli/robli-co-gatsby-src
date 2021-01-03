@@ -57,7 +57,7 @@ Understanding and collecting big data is so important to these businesses, that 
 
 <p>
 <figure>
-	<img src="/images/2014/09/apple-pay.jpg">
+	<img src="/images/2014/09/apple-pay.jpg" />
 	<figcaption> Banksy could not have done this better. Image source: TechCrunch (http://techcrunch.com/2014/09/09/announces-mobile-payments-solution-called-apple-pay/) </figcaption>
 </figure>
 </p>

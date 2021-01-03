@@ -24,7 +24,7 @@ Somehow, those memories turned into this blog post.
 
 <p>
     <figure>
-        <img src="/images/2013/06/2002-10-16-at-19-32-14-winstons-room2.jpg">
+        <img src="/images/2013/06/2002-10-16-at-19-32-14-winstons-room2.jpg" />
         <figcaption>My first personal computer that was all mine: a Pentium II running Windows 95 then, badly, ran Windows 98. </figcaption>
     </figure>
 </p>
@@ -49,7 +49,7 @@ Looking back to this time (mid to late 90s when I was about 12), my biggest regr
 
 <p>
     <figure>
-        <img src="/images/2013/06/2002-10-18-at-20-11-06-dsc00469.jpg">
+        <img src="/images/2013/06/2002-10-18-at-20-11-06-dsc00469.jpg" />
         <figcaption>Dell Inspiron, Pentium III, Windows XP.</figcaption>
     </figure>
 </p>
@@ -66,7 +66,7 @@ This was during a time when the industry was trying to move to the laptop as bei
 
 <p>
     <figure>
-        <img src="/images/2013/06/2003-01-31-at-15-57-25-dsc00885.jpg">
+        <img src="/images/2013/06/2003-01-31-at-15-57-25-dsc00885.jpg" />
         <figcaption>Nokia 8850</figcaption>
     </figure>
 </p>
@@ -79,7 +79,7 @@ An outcome that I now know as the goal of good design.
 
 <p>
     <figure>
-        <img src="/images/2013/06/2005-07-06-at-14-26-15-dsc02546.jpg">
+        <img src="/images/2013/06/2005-07-06-at-14-26-15-dsc02546.jpg" />
         <figcaption>Wi-fi card expansion.</figcaption>
     </figure>
 </p>
@@ -90,7 +90,7 @@ Even after all those years putting up with the shitty trackpad, build quality an
 
 <p>
     <figure>
-        <img src="/images/2013/06/2006-05-01-at-11-39-25-dsc00555.jpg">
+        <img src="/images/2013/06/2006-05-01-at-11-39-25-dsc00555.jpg" />
         <figcaption>iPod (3rd Gen) and Palm Tungsten T</figcaption>
     </figure>
 </p>
@@ -116,7 +116,7 @@ I am just happy that product design is a core part of the computer industry toda
 
 <p>
     <figure>
-        <img src="/images/2013/06/2005-09-10-at-16-50-19-dsc02765.jpg">
+        <img src="/images/2013/06/2005-09-10-at-16-50-19-dsc02765.jpg" />
         <figcaption>iMac G5</figcaption>
     </figure>
 </p>
@@ -135,7 +135,7 @@ The traditional reasons to not switch to a Mac were fading away and the seeds pl
 
 <p>
     <figure>
-        <img src="/images/2013/06/2006-11-19-at-02-20-59-dsc00705.jpg">
+        <img src="/images/2013/06/2006-11-19-at-02-20-59-dsc00705.jpg" />
         <figcaption>iMac G5</figcaption>
     </figure>
 </p>
@@ -162,21 +162,21 @@ I have never looked back.
 
 <p>
     <figure>
-        <img src="/images/2013/06/2007-12-02-at-04-01-21-dsc00798.jpg">
+        <img src="/images/2013/06/2007-12-02-at-04-01-21-dsc00798.jpg" />
         <figcaption>1st Gen Mid-2007 MacBook Pro (one of the worst laptop keyboards ever made)</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="/images/2013/06/2009-06-17-at-04-40-49-img_0401.jpg">
+        <img src="/images/2013/06/2009-06-17-at-04-40-49-img_0401.jpg" />
         <figcaption>Mid-2008 Intel Core 2 Duo iMac</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="/images/2013/06/20110513_201902_20110513-201902-_rli1509.jpg">
+        <img src="/images/2013/06/20110513_201902_20110513-201902-_rli1509.jpg" />
         <figcaption>Mid-2011 iMac - current main computer</figcaption>
     </figure>
 </p>
@@ -185,7 +185,7 @@ I have never looked back.
 
 <p>
     <figure>
-        <img src="/images/2013/06/2010-05-14-at-00-26-49-img_0601.jpg">
+        <img src="/images/2013/06/2010-05-14-at-00-26-49-img_0601.jpg" />
         <figcaption>iPhone 3GS</figcaption>
     </figure>
 </p>
@@ -205,7 +205,7 @@ Not just for nerds like me, but for everyone. People are tool makers and these t
 
 <p>
     <figure>
-        <img src="/images/2013/06/20130607_073629_20130607_073629__rli8428.jpg">
+        <img src="/images/2013/06/20130607_073629_20130607_073629__rli8428.jpg" />
         <figcaption>Computers are now truly just tools</figcaption>
     </figure>
 </p>
@@ -215,7 +215,7 @@ I think the picture above says a lot about where the computer industry is right 
 
 <p>
     <figure>
-        <img src="/images/2013/06/img_1750.jpg">
+        <img src="/images/2013/06/img_1750.jpg" />
         <figcaption>A picture taken of my current toolset by another computer (iPhone 5) that fits in my pocket and is more powerful than the machine that NASA used to put the first person on the moon (and bring him safely back). Amazing.</figcaption>
     </figure>
 </p>

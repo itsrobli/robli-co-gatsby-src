@@ -22,7 +22,7 @@ This indicates this commodity object is now someone’s property.
 
 But most interestingly, the newly snapped-off end can now be used to lift the toothpick off the table so it can be re-used.
 
-![tootchpicks yo!](http://robli.co/images/2016/01/jap_des_01.jpg)
+![tootchpicks yo!](/images/2016/01/jap_des_01.jpg)
 
 This type of thinking about eating utensils extends to soup spoons as well. The spoon that comes with ramen has a little hook at the end that stops it from falling back into the bowl.
 

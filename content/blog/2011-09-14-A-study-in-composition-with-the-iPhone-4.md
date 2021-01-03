@@ -25,140 +25,140 @@ I did learn a lot from this exercise and would recommend it to anyone interested
 
 <p>
     <figure>
-        <img src="http://farm7.static.flickr.com/6083/6081277072_c07eed7a80_z.jpg">
+        <img src="http://farm7.static.flickr.com/6083/6081277072_c07eed7a80_z.jpg" />
         <figcaption>Leading lines.  Depth.  Rule of thirds.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm7.static.flickr.com/6192/6074818864_c7806a7b1a_z.jpg">
+        <img src="http://farm7.static.flickr.com/6192/6074818864_c7806a7b1a_z.jpg" />
         <figcaption>The contrast in textures. The lines. The mannequins in the left window.  Shapes.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm7.static.flickr.com/6192/6056911537_5b9050eed8_z.jpg">
+        <img src="http://farm7.static.flickr.com/6192/6056911537_5b9050eed8_z.jpg" />
         <figcaption>Scale. Triangle. Repeating shapes. Frame within a frame.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm7.static.flickr.com/6190/6039781453_d51e518c23_z.jpg">
+        <img src="http://farm7.static.flickr.com/6190/6039781453_d51e518c23_z.jpg" />
         <figcaption>Negative space. Lines. Shapes. Texture.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm7.static.flickr.com/6002/6017577741_aff83853aa_z.jpg">
+        <img src="http://farm7.static.flickr.com/6002/6017577741_aff83853aa_z.jpg" />
         <figcaption>Circles. Colours.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm7.static.flickr.com/6017/6005595578_3b53429ea1_z.jpg">
+        <img src="http://farm7.static.flickr.com/6017/6005595578_3b53429ea1_z.jpg" />
         <figcaption>Leading lines. Repeated shapes and form.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm7.static.flickr.com/6011/5976399487_63fddb5a9d_z.jpg">
+        <img src="http://farm7.static.flickr.com/6011/5976399487_63fddb5a9d_z.jpg" />
         <figcaption>Scale.  Colour.  Unexpected moments.  Details.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm7.static.flickr.com/6128/5973663326_48050d45b1_z.jpg">
+        <img src="http://farm7.static.flickr.com/6128/5973663326_48050d45b1_z.jpg" />
         <figcaption>Lines. Scale. Shape and form.  Patterns.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm7.static.flickr.com/6013/5911092843_7c4094954e_z.jpg">
+        <img src="http://farm7.static.flickr.com/6013/5911092843_7c4094954e_z.jpg" />
         <figcaption>Colours. Repeating shapes.  Lines.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm6.static.flickr.com/5196/5893437378_2aa4325ff9_z.jpg">
+        <img src="http://farm6.static.flickr.com/5196/5893437378_2aa4325ff9_z.jpg" />
         <figcaption>Texture.  Light.  Shapes.  Triangles.  Colours.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm6.static.flickr.com/5186/5863197648_a5d1838fc3_z.jpg">
+        <img src="http://farm6.static.flickr.com/5186/5863197648_a5d1838fc3_z.jpg" />
         <figcaption>Reflections.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm3.static.flickr.com/2751/5859803110_10c92199c1_z.jpg">
+        <img src="http://farm3.static.flickr.com/2751/5859803110_10c92199c1_z.jpg" />
         <figcaption>Repetition.  Shapes.  Patterns.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm6.static.flickr.com/5026/5832228648_b08eebbc0f_z.jpg">
+        <img src="http://farm6.static.flickr.com/5026/5832228648_b08eebbc0f_z.jpg" />
         <figcaption>Lines.  Colours.  Perspective.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm4.static.flickr.com/3511/5819919864_d4549cb70f_z.jpg">
+        <img src="http://farm4.static.flickr.com/3511/5819919864_d4549cb70f_z.jpg" />
         <figcaption>Lines.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm3.static.flickr.com/2356/5817587042_dafbbcbd6e_z.jpg">
+        <img src="http://farm3.static.flickr.com/2356/5817587042_dafbbcbd6e_z.jpg" />
         <figcaption>Reflections. Ambiguity.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm6.static.flickr.com/5314/5816712050_b807fc702b_z.jpg">
+        <img src="http://farm6.static.flickr.com/5314/5816712050_b807fc702b_z.jpg" />
         <figcaption>Balance. Moments. Light.  Contrast.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm6.static.flickr.com/5079/5812870339_e790e4a790_z.jpg">
+        <img src="http://farm6.static.flickr.com/5079/5812870339_e790e4a790_z.jpg" />
         <figcaption>Leading lines. Negative space.  Contrasting textures.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm4.static.flickr.com/3347/5810923717_60926a5f74_z.jpg">
+        <img src="http://farm4.static.flickr.com/3347/5810923717_60926a5f74_z.jpg" />
         <figcaption>Juxtaposition.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm3.static.flickr.com/2804/5810206273_23866a9b04_z.jpg">
+        <img src="http://farm3.static.flickr.com/2804/5810206273_23866a9b04_z.jpg" />
         <figcaption>Negative space. Scale.</figcaption>
     </figure>
 </p>
 
 <p>
     <figure>
-        <img src="http://farm3.static.flickr.com/2550/5810071402_6c2ecdaeca_z.jpg">
+        <img src="http://farm3.static.flickr.com/2550/5810071402_6c2ecdaeca_z.jpg" />
         <figcaption>Textures. Colours.  Leading lines.</figcaption>
     </figure>
 </p>
