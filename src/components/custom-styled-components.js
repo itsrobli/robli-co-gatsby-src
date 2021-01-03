@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import Image from "gatsby-image"
 
 
 export const BackToPhotosButton = styled(Link)`
@@ -65,5 +66,12 @@ export const PhotosListStyledLink = styled(Link)`
   &:hover {
     font-weight: 500;
   }
+
+`
+export const PhotoCollectionHeroImage = styled(Image)`
+  
+  width: 90vw;
+  max-width: 100vw;
+  left: calc(-45vw + 50%);
 
 `

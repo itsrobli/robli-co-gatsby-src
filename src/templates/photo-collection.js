@@ -3,7 +3,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
-import { BackToPhotosButton } from "../components/custom-styled-components"
+import {
+  BackToPhotosButton,
+  PhotoCollectionHeroImage,
+  PhotosListSpacer10px
+} from "../components/custom-styled-components"
 
 const PhotoCollectionTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -24,20 +28,20 @@ const PhotoCollectionTemplate = ({ data, location }) => {
       >
         {
           photosCollection.map((photo, key) => {
+              return (
+                <div>
+                  <PhotosListSpacer10px />
+                  <PhotoCollectionHeroImage
+                    key={key}
+                    fluid={photo.childImageSharp.fluid}
+                  />
 
-            return (
-
-
-              <Image key={key} fluid={photo.childImageSharp.fluid} />
-
-            )
-
+                  <PhotosListSpacer10px />
+                </div>
+              )
             }
-
           )
         }
-
-
       </article>
       <div>
         Hi from template
@@ -71,7 +75,7 @@ export const pageQuery = graphql`
     ) {
         nodes {
             childImageSharp {
-                fluid {
+                fluid (quality: 100) {
                     ...GatsbyImageSharpFluid
                 }
             }
