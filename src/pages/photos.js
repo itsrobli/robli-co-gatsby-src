@@ -14,7 +14,7 @@ import SEO from "../components/seo"
 
 const PhotosList = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const photosManifest = data.allMarkdownRemark.nodes
+  const photosManifest = data.allMdx.nodes
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Photos" />
@@ -54,7 +54,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/photos/"}}, sort: {fields: [frontmatter___id, frontmatter___date], order: ASC}) {
+    allMdx(filter: {fileAbsolutePath: {regex: "/content/photos/"}}, sort: {fields: [frontmatter___id, frontmatter___date], order: ASC}) {
       nodes {
         excerpt
         fields {

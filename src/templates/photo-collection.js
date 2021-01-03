@@ -10,7 +10,7 @@ import {
 } from "../components/custom-styled-components"
 
 const PhotoCollectionTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
+  const post = data.mdx
   const photosCollection = data.photosCollection.nodes
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
@@ -82,10 +82,10 @@ export const pageQuery = graphql`
             }
         }
     }
-    markdownRemark(id: { eq: $id }) {
+    mdx(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
-      html
+      body
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
@@ -93,7 +93,7 @@ export const pageQuery = graphql`
         filesystem_directory
       }
     }
-    previous: markdownRemark(id: { eq: $previousPhotoId }) {
+    previous: mdx(id: { eq: $previousPhotoId }) {
       fields {
         slug
       }
@@ -101,7 +101,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    next: markdownRemark(id: { eq: $nextPhotoId }) {
+    next: mdx(id: { eq: $nextPhotoId }) {
       fields {
         slug
       }

@@ -5,10 +5,11 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { TitleHeader } from "../components/custom-styled-components"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  const posts = data.allMdx.nodes
 
   if (posts.length === 0) {
     return (
@@ -48,12 +49,7 @@ const BlogIndex = ({ data, location }) => {
                   <small>{post.frontmatter.date}</small>
                 </header>
                 <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt
-                    }}
-                    itemProp="description"
-                  />
+                  <MDXRenderer>{post.body}</MDXRenderer>
                 </section>
               </div>
             </li>
@@ -73,7 +69,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
+    allMdx(
     filter: {fileAbsolutePath: {regex: "/content/blog/"}},
     sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
