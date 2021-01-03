@@ -4,6 +4,10 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 
 const PhotoCollectionTemplate = ({ data, location }) => {
+  const post = data.markdownRemark
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const { previous, next } = data
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -27,10 +31,10 @@ const PhotoCollectionTemplate = ({ data, location }) => {
 export default PhotoCollectionTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
+  query PhotoCollectionBySlug(
     $id: String!
-    $previousPostId: String
-    $nextPostId: String
+    $previousPhotoId: String
+    $nextPhotoId: String
   ) {
     site {
       siteMetadata {
@@ -47,7 +51,7 @@ export const pageQuery = graphql`
         description
       }
     }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
+    previous: markdownRemark(id: { eq: $previousPhotoId }) {
       fields {
         slug
       }
@@ -55,7 +59,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    next: markdownRemark(id: { eq: $nextPostId }) {
+    next: markdownRemark(id: { eq: $nextPhotoId }) {
       fields {
         slug
       }

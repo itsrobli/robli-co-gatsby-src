@@ -5,8 +5,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   // Define a template for blog post
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
-  const photoCollection = path.resolve(`./src/templates/photo-collection.js`)
+  const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`)
+  const photoCollectionTemplate = path.resolve(`./src/templates/photo-collection.js`)
 
 
   // Get all markdown blog posts sorted by date
@@ -62,7 +62,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: `/blog${post.fields.slug}`,
-        component: blogPost,
+        component: blogPostTemplate,
         context: {
           id: post.id,
           previousPostId,
@@ -70,18 +70,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
     })
-  } else if (photos.length > 0) {
+  }
+
+  if (photos.length > 0) {
     photos.forEach((photo, index) => {
-      const previousPostId = index === 0 ? null : photos[index - 1].id
-      const nextPostId = index === photos.length - 1 ? null : photos[index + 1].id
+      const previousPhotoId = index === 0 ? null : photos[index - 1].id
+      const nextPhotoId = index === photos.length - 1 ? null : photos[index + 1].id
 
       createPage({
-        path: photo.fields.slug,
-        component: photoCollection,
+        path: `/photos${photo.fields.slug}`,
+        component: photoCollectionTemplate,
         context: {
           id: photo.id,
-          previousPostId,
-          nextPostId
+          previousPhotoId,
+          nextPhotoId
         }
       })
     })
