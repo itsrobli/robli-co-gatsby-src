@@ -2,9 +2,12 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
+import Image from "gatsby-image"
+import { BackToPhotosButton } from "../components/custom-styled-components"
 
 const PhotoCollectionTemplate = ({ data, location }) => {
   const post = data.markdownRemark
+  const photosCollection = data.photosCollection.nodes
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
@@ -19,11 +22,27 @@ const PhotoCollectionTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
+        {
+          photosCollection.map((photo, key) => {
+
+            return (
+
+
+              <Image key={key} fluid={photo.childImageSharp.fluid} />
+
+            )
+
+            }
+
+          )
+        }
+
 
       </article>
       <div>
         Hi from template
       </div>
+      <BackToPhotosButton to="/photos">Back to photos</BackToPhotosButton>
     </Layout>
   )
 }
@@ -35,11 +54,28 @@ export const pageQuery = graphql`
     $id: String!
     $previousPhotoId: String
     $nextPhotoId: String
+    $photoCollectionLocationRegex: String  
   ) {
     site {
       siteMetadata {
         title
       }
+    }
+    photosCollection: allFile(
+        filter: {
+            sourceInstanceName: {eq: "photos"}, 
+            dir: {regex: $photoCollectionLocationRegex},
+            ext: {eq: ".jpg"}
+        }, 
+        sort: {fields: [childImageSharp___fluid___originalName], order: ASC}
+    ) {
+        nodes {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
     }
     markdownRemark(id: { eq: $id }) {
       id
@@ -49,6 +85,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        filesystem_directory
       }
     }
     previous: markdownRemark(id: { eq: $previousPhotoId }) {

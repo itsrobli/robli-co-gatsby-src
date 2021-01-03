@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 
-export const BackToPhotosButton = styled.a`
+export const BackToPhotosButton = styled(Link)`
 
   text-transform: uppercase;
   font-size: 17px;

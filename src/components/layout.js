@@ -27,7 +27,6 @@ const Layout = ({ location, title, children }) => {
       <div className="global-wrapper" data-is-root-path={isRootPath}>
         <header className="global-header">{header}</header>
         <main>{children}</main>
-        <BackToPhotosButton href="https://robli.co/photos/">Hi</BackToPhotosButton>
         <footer>
           © 2010 - {new Date().getFullYear()} Robert Li
           {` `}

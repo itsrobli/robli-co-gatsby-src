@@ -33,6 +33,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             fields {
               slug
             }
+            frontmatter {
+              filesystem_directory
+            }
           }
         }
       }
@@ -76,6 +79,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     photos.forEach((photo, index) => {
       const previousPhotoId = index === 0 ? null : photos[index - 1].id
       const nextPhotoId = index === photos.length - 1 ? null : photos[index + 1].id
+      const photoCollectionLocationRegex = `/${photo.frontmatter.filesystem_directory}/collection/`
 
       createPage({
         path: `/photos${photo.fields.slug}`,
@@ -83,7 +87,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         context: {
           id: photo.id,
           previousPhotoId,
-          nextPhotoId
+          nextPhotoId,
+          photoCollectionLocationRegex
         }
       })
     })
