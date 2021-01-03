@@ -1,7 +1,7 @@
 ---
 title: Japan trip September 2015
 description: "Finally got around to going through"
-date: 2016-01-11 02:07 AEDT
+date: 2016-01-11 02:07
 author: "Rob Li"
 tags:
 image: "http://robli.co/images/2016/japan_sep_2015_tych.jpg"

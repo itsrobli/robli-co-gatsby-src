@@ -1,7 +1,7 @@
 ---
 title: A new website and 10 years on the Mac
 description: "I made a new website. I wrote about it. Yeah."
-date: 2015-08-23 17:14 AEST
+date: 2015-08-23 17:14
 author: "Rob Li"
 tags:
 - writing

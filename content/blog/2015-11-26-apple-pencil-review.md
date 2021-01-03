@@ -1,7 +1,7 @@
 ---
 title: Apple Pencil review
 description: ""
-date: 2015-11-26 00:07 AEDT
+date: 2015-11-26 00:07
 author: "Rob Li"
 tags:
 - tech

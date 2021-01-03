@@ -75,3 +75,33 @@ export const PhotoCollectionHeroImage = styled(Image)`
   left: calc(-45vw + 50%);
 
 `
+
+export const TitleHeader = styled.h1`
+
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+`
+
+export const BlogPostMetadata = styled.div`
+
+  font-size: 85%;
+  color: #888;
+  margin-bottom: 1.5em;
+  line-height: 1.25em;
+  
+  a {
+    color: #888;
+    border-bottom: none;
+    text-decoration: none;
+    font-weight: normal;
+  }
+  
+  a:hover {
+    border-bottom: 2px solid #fc7e0f;
+    font-weight: normal;
+  }
+`

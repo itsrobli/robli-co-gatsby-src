@@ -6,7 +6,7 @@ import Image from "gatsby-image"
 import {
   BackToPhotosButton,
   PhotoCollectionHeroImage,
-  PhotosListSpacer10px
+  PhotosListSpacer10px, TitleHeader
 } from "../components/custom-styled-components"
 
 const PhotoCollectionTemplate = ({ data, location }) => {
@@ -26,6 +26,7 @@ const PhotoCollectionTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
+        <TitleHeader>{post.frontmatter.title}</TitleHeader>
         {
           photosCollection.map((photo, key) => {
               return (

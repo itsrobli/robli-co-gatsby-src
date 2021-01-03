@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import {
   PhotosListCategoryLabel, PhotosListSpacer10px,
   PhotosListStyledLink,
-  PhotosListTile
+  PhotosListTile, TitleHeader
 } from "../components/custom-styled-components"
 import { Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
@@ -19,7 +19,7 @@ const PhotosList = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Photos" />
       {/*<div style={{ maxWidth: `960px`, margin: `1.45rem` }}>*/}
-        <h1>Photos</h1>
+        <TitleHeader>Photos</TitleHeader>
         <Row>
           {photosManifest.map((photoCollection, key) => {
             return (

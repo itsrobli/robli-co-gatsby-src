@@ -1,7 +1,7 @@
 ---
 title: The Stratechery 2015 year in review
 description: ""
-date: 2015-12-29 16:12 AEDT
+date: "2015-12-29 16:12"
 author: "Rob Li"
 tags:
 ---

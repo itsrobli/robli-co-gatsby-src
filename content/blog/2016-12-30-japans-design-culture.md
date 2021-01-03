@@ -1,7 +1,7 @@
 ---
 title: Japan's Design Culture
 description: ""
-date: 2016-12-30 00:40 AEDT
+date: 2016-12-30 00:40
 author: "Rob Li"
 tags:
 - ethos
