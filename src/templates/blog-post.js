@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { BlogPostMetadata } from "../components/custom-styled-components"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.mdx
@@ -28,10 +29,9 @@ const BlogPostTemplate = ({ data, location }) => {
             {post.frontmatter.date} by <Link to="/about">Rob Li</Link>
           </BlogPostMetadata>
         </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
+        <section>
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </section>
         <hr />
         <footer>
         </footer>
@@ -87,7 +87,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "dddd, DD MMMM YYYY")
         description
-        author
+#        author
         tags
       }
     }
