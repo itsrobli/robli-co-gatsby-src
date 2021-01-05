@@ -87,37 +87,7 @@ figcaption {
   padding-top: 5px;
   font-style: italic;
   text-align: center;
-}
 
-small small,
-.x-small {
-  font-size: 70%;
-  line-height: 1em;
-}
-
-footer {
-  padding-top: 5em;
-  padding-bottom: 1em;
-  color: #888888;
-}
-
-footer p {
-  margin-bottom: 0;
-}
-
-footer p a,
-footer p a:visited {
-  color: #888888;
-  border-bottom: none; 
-  text-decoration: none;
-}
-
-
-h1.title-page,
-h2.title-page {
-  text-transform: uppercase;
-  font-weight: 300;
-  letter-spacing: 3px;
 }
 
 .front-page a {

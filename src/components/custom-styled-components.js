@@ -160,3 +160,27 @@ export const CustomNavHomeButton = styled.span`
   }
   
 `
+
+export const SiteFooterNotices = styled.footer`
+
+  font-size: 70%;
+  line-height: 1em;
+  padding-top: 5em;
+  padding-bottom: 1em;
+  color: #888888;
+  text-align: center;
+  
+  a,
+  a:visited {
+    color: #888888;
+    border-bottom: 1px solid #CCC;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:active,
+  a:focus {
+    color: #fc7e0f;
+    border-bottom: 2px solid #fc7e0f;
+    text-decoration: none;
+`
