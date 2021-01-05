@@ -90,13 +90,6 @@ figcaption {
 
 }
 
-h1.title-page,
-h2.title-page {
-  text-transform: uppercase;
-  font-weight: 300;
-  letter-spacing: 3px;
-}
-
 .front-page a {
   border-bottom: none; 
 }

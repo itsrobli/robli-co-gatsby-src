@@ -32,7 +32,7 @@ const Layout = ({ location, title, children }) => {
         <SiteFooterNotices>
           © 2010 - {new Date().getFullYear()} Robert Li.
           {` `}
-          <a href="https://www.gatsbyjs.com">Privacy policy</a>
+          <Link to="/privacy">Privacy policy</Link>
         </SiteFooterNotices>
       </div>
     </Container>
