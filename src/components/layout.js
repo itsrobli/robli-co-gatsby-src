@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { BackToPhotosButton } from "./custom-styled-components"
 import { Container } from "react-bootstrap"
+import Navbar from "./navbar"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -25,7 +26,8 @@ const Layout = ({ location, title, children }) => {
   return (
     <Container>
       <div className="global-wrapper" data-is-root-path={isRootPath}>
-        <header className="global-header">{header}</header>
+        {/*<header className="global-header">{header}</header>*/}
+        <Navbar />
         <main>{children}</main>
         <footer>
           © 2010 - {new Date().getFullYear()} Robert Li

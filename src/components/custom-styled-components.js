@@ -105,3 +105,58 @@ export const BlogPostMetadata = styled.div`
     font-weight: normal;
   }
 `
+export const CustomNav = styled.nav`
+  
+  margin-bottom: 50px;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  
+`
+
+export const CustomNavUl = styled.ul`
+
+  float: right;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  
+`
+
+export const CustomNavUlLi = styled.ul`
+
+  margin-left: 0;
+  padding: 5px;
+  list-style: none;
+  display: inline;
+  text-transform: uppercase;
+  
+  a {
+    text-decoration: none;
+    color: #888;
+    font-size: 13px;
+    line-height: 13px;
+  }
+  
+  &:hover {
+    color: #333;
+  }
+  
+`
+
+export const CustomNavHomeButton = styled.span`
+
+  text-transform: none;
+  float: left;
+  
+  a {
+    text-decoration: none;
+    color: #888;
+    font-size: 13px;
+    line-height: 13px;
+  }
+  
+  &:hover {
+    color: #333;
+  }
+  
+`
