@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { BackToPhotosButton } from "./custom-styled-components"
+import { BackToPhotosButton, SiteFooterNotices } from "./custom-styled-components"
 import { Container } from "react-bootstrap"
 import Navbar from "./navbar"
 
@@ -29,11 +29,11 @@ const Layout = ({ location, title, children }) => {
         {/*<header className="global-header">{header}</header>*/}
         <Navbar />
         <main>{children}</main>
-        <footer>
-          © 2010 - {new Date().getFullYear()} Robert Li
+        <SiteFooterNotices>
+          © 2010 - {new Date().getFullYear()} Robert Li.
           {` `}
-          <a href="https://www.gatsbyjs.com">Privacy Policy</a>
-        </footer>
+          <a href="https://www.gatsbyjs.com">Privacy policy</a>
+        </SiteFooterNotices>
       </div>
     </Container>
   )
