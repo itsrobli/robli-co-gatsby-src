@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import { CustomNav, CustomNavHomeButton, CustomNavUl, CustomNavUlLi } from "./custom-styled-components"
+import { FaRss } from "@react-icons/all-files/fa/FaRss"
+
 
 const Navbar = () => {
   return (
@@ -20,6 +22,9 @@ const Navbar = () => {
         </CustomNavUlLi>
         <CustomNavUlLi>
           <Link to="/about">About</Link>
+        </CustomNavUlLi>
+        <CustomNavUlLi>
+          <Link to="/rss.xml"><FaRss /></Link>
         </CustomNavUlLi>
       </CustomNavUl>
     </CustomNav>
