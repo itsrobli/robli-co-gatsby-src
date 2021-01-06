@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import {
   PhotosListCategoryLabel, PhotosListSpacer10px,
@@ -18,7 +18,6 @@ const PhotosList = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Photos" />
-      {/*<div style={{ maxWidth: `960px`, margin: `1.45rem` }}>*/}
         <TitleHeader>Photos</TitleHeader>
         <Row>
           {photosManifest.map((photoCollection, key) => {
@@ -40,7 +39,6 @@ const PhotosList = ({ data, location }) => {
         </Row>
 
 
-      {/*</div>*/}
     </Layout>
   )
 }

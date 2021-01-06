@@ -1,10 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import photos from "./photos"
 import { Col, Row } from "react-bootstrap"
 
 const BlogIndex = ({ data, location }) => {
@@ -26,9 +24,8 @@ const BlogIndex = ({ data, location }) => {
             <p>I first learned to code because I couldn't find photo hosting with gallery templates to my liking.</p>
           </Col>
           <Col xs={4}>
-            <Link to="/about">About me</Link>
+            <Link to="/about">About</Link>
             <p>My past and present projects.</p>
-            <Bio />
           </Col>
         </Row>
         <Row>

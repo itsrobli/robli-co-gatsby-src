@@ -9,7 +9,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import { Col, Row } from "react-bootstrap"
-// import { FaGithub, FaTwitter, FaInstagram } from "@react-icons/all-files"
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin"
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
@@ -22,8 +21,8 @@ const Bio = () => {
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
-          fixed(width:80, height: 80, quality: 95) {
-            ...GatsbyImageSharpFixed
+          fluid(quality: 95) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -45,7 +44,7 @@ const Bio = () => {
   const author = data.site.siteMetadata?.author
   const social = data.site.siteMetadata?.social
 
-  const avatar = data?.avatar?.childImageSharp?.fixed
+  const avatar = data?.avatar?.childImageSharp?.fluid
 
   return (
     <div className="bio">
@@ -60,11 +59,11 @@ const Bio = () => {
         <Col xs={4}>
           {avatar && (
             <Image
-              fixed={avatar}
+              fluid={avatar}
               alt={author?.name || ``}
               className="bio-avatar"
               imgStyle={{
-                borderRadius: `50%`,
+                borderRadius: `6px`,
               }}
             />
           )}
