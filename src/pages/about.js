@@ -36,7 +36,6 @@ const About = ({ data, location }) => {
         </Col>
       </Row>
 
-
       <AboutMarkdown />
 
     </Layout>
