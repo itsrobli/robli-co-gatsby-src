@@ -16,7 +16,10 @@ const Navbar = () => {
           <Link to="/photos">Photos</Link>
         </CustomNavUlLi>
         <CustomNavUlLi>
-          <Link to="/about">About me</Link>
+          <Link to="https://github.com/itsrobli">Code</Link>
+        </CustomNavUlLi>
+        <CustomNavUlLi>
+          <Link to="/about">About</Link>
         </CustomNavUlLi>
       </CustomNavUl>
     </CustomNav>
