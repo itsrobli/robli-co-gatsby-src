@@ -11,7 +11,7 @@ Finally got around to going through [these photos][1].
 
 [![][image-1]][2]
 
-[1]:	http://robli.co/photos/japan-sep-2015/
-[2]:	http://robli.co/photos/japan-sep-2015/
+[1]:	/photos/japan-sep-2015/
+[2]:	/photos/japan-sep-2015/
 
-[image-1]:	http://robli.co/images/2016/01/japan_sep_2015_tych.jpg
+[image-1]:	/images/2016/01/japan_sep_2015_tych.jpg

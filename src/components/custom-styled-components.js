@@ -105,3 +105,82 @@ export const BlogPostMetadata = styled.div`
     font-weight: normal;
   }
 `
+export const CustomNav = styled.nav`
+  
+  margin-bottom: 50px;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  
+`
+
+export const CustomNavUl = styled.ul`
+
+  float: right;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  
+`
+
+export const CustomNavUlLi = styled.ul`
+
+  margin-left: 0;
+  padding: 5px;
+  list-style: none;
+  display: inline;
+  text-transform: uppercase;
+  
+  a {
+    text-decoration: none;
+    color: #888;
+    font-size: 13px;
+    line-height: 13px;
+  }
+  
+  &:hover {
+    color: #333;
+  }
+  
+`
+
+export const CustomNavHomeButton = styled.span`
+
+  text-transform: none;
+  float: left;
+  
+  a {
+    text-decoration: none;
+    color: #888;
+    font-size: 13px;
+    line-height: 13px;
+  }
+  
+  &:hover {
+    color: #333;
+  }
+  
+`
+
+export const SiteFooterNotices = styled.footer`
+
+  font-size: 70%;
+  line-height: 1em;
+  padding-top: 5em;
+  padding-bottom: 1em;
+  color: #888888;
+  text-align: center;
+  
+  a,
+  a:visited {
+    color: #888888;
+    border-bottom: 1px solid #CCC;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:active,
+  a:focus {
+    color: #fc7e0f;
+    border-bottom: 2px solid #fc7e0f;
+    text-decoration: none;
+`

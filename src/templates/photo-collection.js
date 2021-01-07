@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
-import Image from "gatsby-image"
 import {
   BackToPhotosButton,
   PhotoCollectionHeroImage,
@@ -13,7 +12,7 @@ const PhotoCollectionTemplate = ({ data, location }) => {
   const post = data.mdx
   const photosCollection = data.photosCollection.nodes
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
+  // const { previous, next } = data
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -44,9 +43,6 @@ const PhotoCollectionTemplate = ({ data, location }) => {
           )
         }
       </article>
-      <div>
-        Hi from template
-      </div>
       <BackToPhotosButton to="/photos">Back to photos</BackToPhotosButton>
     </Layout>
   )
