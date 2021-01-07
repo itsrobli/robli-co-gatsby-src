@@ -3,19 +3,18 @@
 </p>
 
 <p align="center">
-
-![PROD Build](https://github.com/itsrobli/robli-co-gatsby-src/workflows/PROD%20GH%20Pages%20Gatsby%20Publish/badge.svg)
-
+    <img src="https://github.com/itsrobli/robli-co-gatsby-src/workflows/PROD%20GH%20Pages%20Gatsby%20Publish/badge.svg" />
 </p>
 
-# Info
+# Notes for my future self
+
 Site is at: [https://robli.co](https://robli.co). It is hosted on GitHub Pages at [this repo](https://github.com/itsrobli/co-robli).
 
-## Dev info
+## Dev notes
 
-The site pretty much follows the standard pattern [documented below](#original-creation). There are some deviations:
+The site pretty much follows the standard Gatsby patterns [documented below](#original-creation). There are some deviations:
 
-- The MDX is used instead of markdown.
+- MDX is used instead of markdown.
     - The RSS feed generator in `gatsby-config.js` uses a custom query because I'm using MDX.
 - The page generation feature in `gatsby-node.js` has a multi-query structure. This is so the photo galleries and blogs could use separate layouts.
 
@@ -25,7 +24,8 @@ The site pretty much follows the standard pattern [documented below](#original-c
 - [ ] Deal with build warnings around ChildImageSharp which likely come from the GraphQL queries in the `src/templates` files.
 - [ ] Image quality is set to high everywhere which results in a very large build bundle. This is desired in the Photos and maybe elsewhere so maybe the answer is to
     - [ ] Cull unused images from `content/blog/images`
-- [ ] Test if code styles are working properly by writing a blog post about the 2.0.0 version of my website.
+- [ ] Test if code CSS styles (and prismjs) are working properly by writing a blog post about building the 2.0.0 version of my website.
+- [ ] Learn to write tests in a Gatsby project and then write some.
 
 
 # Original creation
