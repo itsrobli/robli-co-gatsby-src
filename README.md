@@ -1,16 +1,37 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
+  <img src="content/assets/roblico-icon.png" width="100" />
 </p>
-<h1 align="center">
-  Gatsby's blog starter
-</h1>
 
-Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+<p align="center">
+    <img src="https://github.com/itsrobli/robli-co-gatsby-src/workflows/PROD%20GH%20Pages%20Gatsby%20Publish/badge.svg" />
+</p>
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+# Notes for my future self
+
+Site is at: [https://robli.co](https://robli.co). It is hosted on GitHub Pages at [this repo](https://github.com/itsrobli/co-robli).
+
+## Dev notes
+
+The site pretty much follows the standard Gatsby patterns [documented below](#original-creation). There are some deviations:
+
+- MDX is used instead of markdown.
+    - The RSS feed generator in `gatsby-config.js` uses a custom query because I'm using MDX.
+- The page generation feature in `gatsby-node.js` has a multi-query structure. This is so the photo galleries and blogs could use separate layouts.
+
+## Outstanding tasks
+
+- [ ] Update URLs in blog markdown files to no longer reference the old blog site.
+- [ ] Deal with build warnings around ChildImageSharp which likely come from the GraphQL queries in the `src/templates` files.
+- [ ] Image quality is set to high everywhere which results in a very large build bundle. This is desired in the Photos and maybe elsewhere so maybe the answer is to
+    - [ ] Cull unused images from `content/blog/images`
+- [ ] Test if code CSS styles (and prismjs) are working properly by writing a blog post about building the 2.0.0 version of my website.
+- [ ] Learn to write tests in a Gatsby project and then write some.
+- [ ] Remove redundant CSS.
+
+
+# Original creation
+
+This section details how it all started. There is not too much deviation from the standard Gatsby patterns other than noted above.
 
 ## 🚀 Quick start
 
@@ -90,10 +111,3 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-blog)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
