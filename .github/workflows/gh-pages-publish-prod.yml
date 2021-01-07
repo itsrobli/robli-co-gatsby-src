@@ -1,4 +1,4 @@
-name: [PROD] GH Pages Gatsby Publish
+name: PROD GH Pages Gatsby Publish
 
 on:
   push:
