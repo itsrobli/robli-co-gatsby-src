@@ -1,9 +1,11 @@
 <p align="center">
-  <img src="content/assets/roblico-icon.png" width="200" />
+  <img src="content/assets/roblico-icon.png" width="100" />
 </p>
 
 <p align="center">
+
 ![PROD Build](https://github.com/itsrobli/robli-co-gatsby-src/workflows/PROD%20GH%20Pages%20Gatsby%20Publish/badge.svg)
+
 </p>
 
 # Info
