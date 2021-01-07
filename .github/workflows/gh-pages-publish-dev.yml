@@ -1,4 +1,4 @@
-name: GH Pages Gatsby Publish
+name: [DEV] GH Pages Gatsby Publish
 
 on:
   push:
