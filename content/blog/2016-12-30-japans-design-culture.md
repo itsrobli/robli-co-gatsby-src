@@ -26,11 +26,11 @@ But most interestingly, the newly snapped-off end can now be used to lift the to
 
 This type of thinking about eating utensils extends to soup spoons as well. The spoon that comes with ramen has a little hook at the end that stops it from falling back into the bowl.
 
-![](http://robli.co/images/2016/01/jap_des_02.jpg)
+![](/images/2016/01/jap_des_02.jpg)
 
 There are many examples of minor conveniences - all adding up to reduce overall friction. Recycling bins next to vending machines. Machines to check you in and out of hotels. Parcel delivery to the airport rather than your hotel. 
 
-![](http://robli.co/images/2016/01/jap_des_03.jpg)
+![](/images/2016/01/jap_des_03.jpg)
 
 The existence of these little things all indicate a culture where people think things through. Everything is designed with intent right down to the minor details.
 
@@ -38,7 +38,7 @@ And along with conveniences, there is real efficiency gains that are achieved.
 
 Below is a queue area for a bank teller which has an overflow area across the path way. 
 
-![](http://robli.co/images/2016/01/jap_des_04.jpg)
+![](/images/2016/01/jap_des_04.jpg)
 
 How often do you have to walk around a queue of people, just standing around, in Sydney?
 
@@ -46,25 +46,25 @@ How often do you have to walk around a queue of people, just standing around, in
 
 This is a diagram at a metro train platform that tells you which carriage you should use to be closest to the exit at every station along that train line.
 
-![](http://robli.co/images/2016/01/jap_des_05.jpg)
+![](/images/2016/01/jap_des_05.jpg)
 
 And then clearly marked is where you should line up so you are simultaneously close to your train carriage door but also not in the way of people exiting the train.
 
-![](http://robli.co/images/2016/01/jap_des_06.jpg)
+![](/images/2016/01/jap_des_06.jpg)
 
 As a small aside, if you catch a bullet train, you will see the train guards performing this ritual. I researched that they do this because pointing at the items you are checking reduces human error. This dance looks ridiculous to an outsider, but it demonstrates the commitment to following well thought-out procedures with precision and purpose.
 
-![](http://robli.co/images/2016/01/jap_des_07.jpg)
+![](/images/2016/01/jap_des_07.jpg)
 
 There are also important conveniences for people who use wheelchairs and need the lower buttons (at every lift I used in Japan).
 
-![](http://robli.co/images/2016/01/jap_des_12.jpg)
+![](/images/2016/01/jap_des_12.jpg)
 
 This dedication to order and procedure extends to eating as well. Everything has its place.
 
-![](http://robli.co/images/2016/01/jap_des_08.jpg)
+![](/images/2016/01/jap_des_08.jpg)
 
-![](http://robli.co/images/2016/01/jap_des_17.jpg)
+![](/images/2016/01/jap_des_17.jpg)
 
 
 ## Other tidbits
@@ -73,31 +73,31 @@ There is always somewhere to put your bag.
 
 In restaurants…
 
-![](http://robli.co/images/2016/01/jap_des_09.jpg)
+![](/images/2016/01/jap_des_09.jpg)
 
 …and toilets. And yes, they’re extremely clean toilets! - I saw people using the shelves and hooks all the time.
 
-![](http://robli.co/images/2016/01/jap_des_10.jpg)
+![](/images/2016/01/jap_des_10.jpg)
 
 Heated mirrors so you don’t have to wipe it off after a shower.
 
-![](http://robli.co/images/2016/01/jap_des_11.jpg)
+![](/images/2016/01/jap_des_11.jpg)
 
 I thought the signs were rather amusing (and often sexist).
 
-![](http://robli.co/images/2016/01/jap_des_13.jpg)
+![](/images/2016/01/jap_des_13.jpg)
 
 Some are just so detailed even foreigners can figure it out.
 
-![](http://robli.co/images/2016/01/jap_des_14.jpg)
+![](/images/2016/01/jap_des_14.jpg)
 
 Other times, they’re just whimsical…
 
-![](http://robli.co/images/2016/01/jap_des_15.jpg)
+![](/images/2016/01/jap_des_15.jpg)
 
 …but often, functional. Why put a solar powered light here, because you need it…and you can.
 
-![](http://robli.co/images/2016/01/jap_des_16.jpg)
+![](/images/2016/01/jap_des_16.jpg)
 
 ## Bad design - why Sydney trains run late when it rains, when the sun is shining, when there is a breeze, when somebody coughs...
 
@@ -126,6 +126,6 @@ The complete list of possible places to sit/stand after entering a Sydney Cityra
 9. Right crevice
 10. Middle
 
-![](http://robli.co/images/2016/01/jap_des_18_cityrail.jpg)
+![](/images/2016/01/jap_des_18_cityrail.jpg)
 
 This shit would not be tolerated in Japan.
