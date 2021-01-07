@@ -26,6 +26,7 @@ The site pretty much follows the standard Gatsby patterns [documented below](#or
     - [ ] Cull unused images from `content/blog/images`
 - [ ] Test if code CSS styles (and prismjs) are working properly by writing a blog post about building the 2.0.0 version of my website.
 - [ ] Learn to write tests in a Gatsby project and then write some.
+- [ ] Remove redundant CSS.
 
 
 # Original creation
