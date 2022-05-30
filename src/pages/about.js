@@ -21,17 +21,22 @@ const About = ({ data, location }) => {
       <Bio />
       <h2>Personal projects</h2>
       <Row>
-        <Col xs={4}>
+        <Col xs={3}>
+          <a href="http://robli.org/know-time-zones/">
+            <Image fluid={data.pngKnowTimeZones.childImageSharp.fluid} />
+          </a>
+        </Col>
+        <Col xs={3}>
           <a href="http://robli.org/where-to/">
             <Image fluid={data.pngWhereTo.childImageSharp.fluid} />
           </a>
         </Col>
-        <Col xs={4}>
+        <Col xs={3}>
           <a href="http://robli.org/nyc-eats/">
             <Image fluid={data.pngNycEats.childImageSharp.fluid} />
           </a>
         </Col>
-        <Col xs={4}>
+        <Col xs={3}>
           <Image fluid={data.pngTimely.childImageSharp.fluid} />
         </Col>
       </Row>
@@ -66,6 +71,13 @@ export const pageQuery = graphql`
             }
         }
         pngWhereTo: file(absolutePath: { regex: "/about-proj-where-to.png/" }) {
+            childImageSharp {
+                fluid(quality: 95) {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+        pngKnowTimeZones: file(absolutePath: { regex: "/about-proj-know-time-zones.png/" }) {
             childImageSharp {
                 fluid(quality: 95) {
                     ...GatsbyImageSharpFluid
