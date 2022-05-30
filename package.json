@@ -2,7 +2,7 @@
   "name": "robli-co-gatsby-src",
   "private": true,
   "description": "robli.co powered by Gatsby and Markdown based on gatsby-starter-blog",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "author": "Robert Li <robertwli@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
