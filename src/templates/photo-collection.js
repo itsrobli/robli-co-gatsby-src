@@ -33,77 +33,65 @@ const PhotoCollectionTemplate = ({ data, location }) => {
                   <PhotosListSpacer10px />
                   <PhotoCollectionHeroImage
                     key={key}
-                    fluid={photo.childImageSharp.fluid}
+                    image={photo.childImageSharp.gatsbyImageData}
                   />
 
                   <PhotosListSpacer10px />
                 </div>
-              )
+              );
             }
           )
         }
       </article>
       <BackToPhotosButton to="/photos">Back to photos</BackToPhotosButton>
     </Layout>
-  )
+  );
 }
 
 export default PhotoCollectionTemplate
 
-export const pageQuery = graphql`
-  query PhotoCollectionBySlug(
-    $id: String!
-    $previousPhotoId: String
-    $nextPhotoId: String
-    $photoCollectionLocationRegex: String  
+export const pageQuery = graphql`query PhotoCollectionBySlug($id: String!, $previousPhotoId: String, $nextPhotoId: String, $photoCollectionLocationRegex: String) {
+  site {
+    siteMetadata {
+      title
+    }
+  }
+  photosCollection: allFile(
+    filter: {sourceInstanceName: {eq: "photos"}, dir: {regex: $photoCollectionLocationRegex}, ext: {eq: ".jpg"}}
+    sort: {fields: [childImageSharp___fluid___originalName], order: ASC}
   ) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    photosCollection: allFile(
-        filter: {
-            sourceInstanceName: {eq: "photos"}, 
-            dir: {regex: $photoCollectionLocationRegex},
-            ext: {eq: ".jpg"}
-        }, 
-        sort: {fields: [childImageSharp___fluid___originalName], order: ASC}
-    ) {
-        nodes {
-            childImageSharp {
-                fluid (quality: 100) {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-    }
-    mdx(id: { eq: $id }) {
-      id
-      excerpt(pruneLength: 160)
-      body
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        description
-        filesystem_directory
-      }
-    }
-    previous: mdx(id: { eq: $previousPhotoId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-      }
-    }
-    next: mdx(id: { eq: $nextPhotoId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
+    nodes {
+      childImageSharp {
+        gatsbyImageData(quality: 100, layout: FULL_WIDTH)
       }
     }
   }
+  mdx(id: {eq: $id}) {
+    id
+    excerpt(pruneLength: 160)
+    body
+    frontmatter {
+      title
+      date(formatString: "MMMM DD, YYYY")
+      description
+      filesystem_directory
+    }
+  }
+  previous: mdx(id: {eq: $previousPhotoId}) {
+    fields {
+      slug
+    }
+    frontmatter {
+      title
+    }
+  }
+  next: mdx(id: {eq: $nextPhotoId}) {
+    fields {
+      slug
+    }
+    frontmatter {
+      title
+    }
+  }
+}
 `

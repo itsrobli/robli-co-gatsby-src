@@ -7,7 +7,7 @@
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import { Col, Row } from "react-bootstrap"
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin"
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
@@ -17,34 +17,31 @@ import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram"
 
 
 const Bio = () => {
-  const data = useStaticQuery(graphql`
-    query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-        childImageSharp {
-          fluid(quality: 95) {
-            ...GatsbyImageSharpFluid
-          }
-        }
+  const data = useStaticQuery(graphql`query BioQuery {
+  avatar: file(absolutePath: {regex: "/profile-pic.jpg/"}) {
+    childImageSharp {
+      gatsbyImageData(quality: 95, layout: FULL_WIDTH)
+    }
+  }
+  site {
+    siteMetadata {
+      author {
+        name
+        summary
       }
-      site {
-        siteMetadata {
-          author {
-            name
-            summary
-          }
-          social {
-            twitter
-          }
-        }
+      social {
+        twitter
       }
     }
-  `)
+  }
+}
+`)
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
   const author = data.site.siteMetadata?.author
   const social = data.site.siteMetadata?.social
 
-  const avatar = data?.avatar?.childImageSharp?.fluid
+  const avatar = data?.avatar?.childImageSharp?.gatsbyImageData
 
   return (
     <div className="bio">
@@ -58,20 +55,18 @@ const Bio = () => {
         </Col>
         <Col xs={4}>
           {avatar && (
-            <Image
-              fluid={avatar}
+            <GatsbyImage
+              image={avatar}
               alt={author?.name || ``}
               className="bio-avatar"
               imgStyle={{
                 borderRadius: `6px`,
-              }}
-            />
+              }} />
           )}
         </Col>
       </Row>
     </div>
-
-  )
+  );
 }
 
 export default Bio

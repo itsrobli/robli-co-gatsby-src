@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import Image from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 
 export const BackToPhotosButton = styled(Link)`
@@ -68,7 +68,7 @@ export const PhotosListStyledLink = styled(Link)`
   }
 
 `
-export const PhotoCollectionHeroImage = styled(Image)`
+export const PhotoCollectionHeroImage = styled(GatsbyImage)`
   
   width: 90vw;
   max-width: 100vw;

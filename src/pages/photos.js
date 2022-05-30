@@ -8,7 +8,7 @@ import {
 } from "../components/custom-styled-components"
 import { Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
-import Image from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import SEO from "../components/seo"
 
 
@@ -26,7 +26,8 @@ const PhotosList = ({ data, location }) => {
                 <PhotosListTile>
                   <PhotosListStyledLink to={`/photos${photoCollection.fields.slug}`}>
 
-                    <Image fluid={photoCollection.frontmatter.thumbnail.childImageSharp.fluid} />
+                    <GatsbyImage
+                      image={photoCollection.frontmatter.thumbnail.childImageSharp.gatsbyImageData} />
                     <PhotosListSpacer10px />
                     {photoCollection.frontmatter.title}
                     <PhotosListCategoryLabel>{photoCollection.frontmatter.category}</PhotosListCategoryLabel>
@@ -34,45 +35,45 @@ const PhotosList = ({ data, location }) => {
                   </PhotosListStyledLink>
                 </PhotosListTile>
               </Col>
-            )
+            );
           })}
         </Row>
 
 
     </Layout>
-  )
+  );
 }
 
 export default PhotosList
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
+export const pageQuery = graphql`{
+  site {
+    siteMetadata {
+      title
     }
-    allMdx(filter: {fileAbsolutePath: {regex: "/content/photos/"}}, sort: {fields: [frontmatter___id, frontmatter___date], order: ASC}) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-          id
-          category
-          thumbnail {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
+  }
+  allMdx(
+    filter: {fileAbsolutePath: {regex: "/content/photos/"}}
+    sort: {fields: [frontmatter___id, frontmatter___date], order: ASC}
+  ) {
+    nodes {
+      excerpt
+      fields {
+        slug
+      }
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        title
+        description
+        id
+        category
+        thumbnail {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }
     }
   }
+}
 `
