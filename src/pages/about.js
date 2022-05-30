@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Bio from "../../src/components/bio"
 import { Col, Row } from "react-bootstrap"
-import Image from "gatsby-image"
+import Image from "gatsby-plugin-image"
 
 
 import AboutMarkdown from "../../content/assets/about.mdx"

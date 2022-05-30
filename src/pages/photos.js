@@ -8,7 +8,7 @@ import {
 } from "../components/custom-styled-components"
 import { Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
-import Image from "gatsby-image"
+import Image from "gatsby-plugin-image"
 import SEO from "../components/seo"
 
 

@@ -7,7 +7,7 @@
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import Image from "gatsby-plugin-image"
 import { Col, Row } from "react-bootstrap"
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin"
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub"

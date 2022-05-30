@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import Image from "gatsby-image"
+import Image from "gatsby-plugin-image"
 
 
 export const BackToPhotosButton = styled(Link)`
