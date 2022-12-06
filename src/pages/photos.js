@@ -54,7 +54,7 @@ export const pageQuery = graphql`{
   }
   allMdx(
     filter: {fileAbsolutePath: {regex: "/content/photos/"}}
-    sort: {fields: [frontmatter___id, frontmatter___date], order: ASC}
+    sort: [{frontmatter: {id: ASC}}, {frontmatter: {date: ASC}}]
   ) {
     nodes {
       excerpt
@@ -75,5 +75,4 @@ export const pageQuery = graphql`{
       }
     }
   }
-}
-`
+}`

@@ -6,14 +6,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PrivacyPolicyMarkdown from "../../content/assets/privacy.md"
 
-
 const PrivacyPolicy = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Privacy policy" />
       <TitleHeader>Privacy policy</TitleHeader>
-      <PrivacyPolicyMarkdown/>
+      <PrivacyPolicyMarkdown />
     </Layout>
   )
 }
@@ -21,11 +20,11 @@ const PrivacyPolicy = ({ data, location }) => {
 export default PrivacyPolicy
 
 export const pageQuery = graphql`
-    query {
-        site {
-            siteMetadata {
-                title
-            }
-        }
+  query {
+    site {
+      siteMetadata {
+        title
+      }
     }
+  }
 `

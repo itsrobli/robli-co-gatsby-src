@@ -11,35 +11,33 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
-    `
-      {
-        posts: allMdx(
-          filter: {fileAbsolutePath: {regex: "/content/blog/"}}, 
-          sort: {fields: [frontmatter___date], order: DESC}
-        ) {
-          nodes {
-            id
-            fields {
-              slug
-            }
-          }
-        }
-        photos: allMdx(
-          filter: {fileAbsolutePath: {regex: "/content/photos/"}}, 
-          sort: {fields: [frontmatter___id, frontmatter___date], order: ASC}
-        ) {
-          nodes {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              filesystem_directory
-            }
-          }
-        }
+    `{
+  posts: allMdx(
+    filter: {fileAbsolutePath: {regex: "/content/blog/"}}
+    sort: {frontmatter: {date: DESC}}
+  ) {
+    nodes {
+      id
+      fields {
+        slug
       }
-    `
+    }
+  }
+  photos: allMdx(
+    filter: {fileAbsolutePath: {regex: "/content/photos/"}}
+    sort: [{frontmatter: {id: ASC}}, {frontmatter: {date: ASC}}]
+  ) {
+    nodes {
+      id
+      fields {
+        slug
+      }
+      frontmatter {
+        filesystem_directory
+      }
+    }
+  }
+}`
   )
 
   if (result.errors) {

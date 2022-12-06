@@ -58,7 +58,7 @@ export const pageQuery = graphql`query PhotoCollectionBySlug($id: String!, $prev
   }
   photosCollection: allFile(
     filter: {sourceInstanceName: {eq: "photos"}, dir: {regex: $photoCollectionLocationRegex}, ext: {eq: ".jpg"}}
-    sort: {fields: [childImageSharp___fluid___originalName], order: ASC}
+    sort: {childImageSharp: {fluid: {originalName: ASC}}}
   ) {
     nodes {
       childImageSharp {
@@ -93,5 +93,4 @@ export const pageQuery = graphql`query PhotoCollectionBySlug($id: String!, $prev
       title
     }
   }
-}
-`
+}`
