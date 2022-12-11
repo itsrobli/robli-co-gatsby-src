@@ -14,7 +14,8 @@ import SEO from "../components/seo"
 
 const PhotosList = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const photosManifest = data.allMdx.nodes
+  const photosManifest = data.allMdx.nodes.filter(node => node.fields.source === 'photos')
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Photos" />
@@ -46,33 +47,35 @@ const PhotosList = ({ data, location }) => {
 
 export default PhotosList
 
-export const pageQuery = graphql`{
-  site {
-    siteMetadata {
-      title
-    }
-  }
-  allMdx(
-    filter: {fileAbsolutePath: {regex: "/content/photos/"}}
-    sort: [{frontmatter: {id: ASC}}, {frontmatter: {date: ASC}}]
-  ) {
-    nodes {
-      excerpt
-      fields {
-        slug
-      }
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+export const pageQuery = graphql`
+  {
+    site {
+      siteMetadata {
         title
-        description
-        id
-        category
-        thumbnail {
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+      }
+    }
+    allMdx(
+      sort: [{ frontmatter: { id: ASC } }, { frontmatter: { date: ASC } }]
+    ) {
+      nodes {
+        excerpt
+        fields {
+          source
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+          id
+          category
+          thumbnail {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH)
+            }
           }
         }
       }
     }
   }
-}`
+`

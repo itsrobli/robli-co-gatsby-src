@@ -8,7 +8,7 @@ import { TitleHeader } from "../components/custom-styled-components"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMdx.nodes
+  const posts = data.allMdx.nodes.filter(node => node.fields.source === 'blog')
 
   if (posts.length === 0) {
     return (
@@ -66,27 +66,27 @@ const BlogIndex = ({ data, location }) => {
 
 export default BlogIndex
 
-export const pageQuery = graphql`{
-  site {
-    siteMetadata {
-      title
-    }
-  }
-  allMdx(
-    filter: {fileAbsolutePath: {regex: "/content/blog/"}}
-    sort: {frontmatter: {date: DESC}}
-  ) {
-    nodes {
-      excerpt
-      body
-      fields {
-        slug
-      }
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+export const pageQuery = graphql`
+  {
+    site {
+      siteMetadata {
         title
-        description
+      }
+    }
+    allMdx(sort: { frontmatter: { date: DESC } }) {
+      nodes {
+        excerpt
+        body
+        fields {
+          source
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+        }
       }
     }
   }
-}`
+`
