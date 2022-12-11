@@ -11,33 +11,35 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
-    `{
-  posts: allMdx(
-    filter: {fileAbsolutePath: {regex: "/content/blog/"}}
-    sort: {frontmatter: {date: DESC}}
-  ) {
-    nodes {
-      id
-      fields {
-        slug
+    `
+      {
+        posts: allMdx(
+          sort: { frontmatter: { date: DESC } }
+        ) {
+          nodes {
+            id
+            fields {
+              source
+              slug
+            }
+          }
+        }
+        photos: allMdx(
+          sort: [{ frontmatter: { id: ASC } }, { frontmatter: { date: ASC } }]
+        ) {
+          nodes {
+            id
+            fields {
+              source
+              slug
+            }
+            frontmatter {
+              filesystem_directory
+            }
+          }
+        }
       }
-    }
-  }
-  photos: allMdx(
-    filter: {fileAbsolutePath: {regex: "/content/photos/"}}
-    sort: [{frontmatter: {id: ASC}}, {frontmatter: {date: ASC}}]
-  ) {
-    nodes {
-      id
-      fields {
-        slug
-      }
-      frontmatter {
-        filesystem_directory
-      }
-    }
-  }
-}`
+    `
   )
 
   if (result.errors) {
@@ -48,8 +50,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.posts.nodes
-  const photos = result.data.photos.nodes
+  const posts = result.data.posts.nodes.filter(node => node.fields.source === 'blog')
+  const photos = result.data.photos.nodes.filter(node => node.fields.source === 'photos')
 
 
   // Create blog posts pages

@@ -13,6 +13,7 @@ module.exports = {
   },
   pathPrefix: `/co-robli-dev`,
   plugins: [
+    `gatsby-plugin-mdx-source-name`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -44,7 +45,7 @@ module.exports = {
             options: {
               maxWidth: 1200,
               quality: 100,
-              linkImagesToOriginal: false
+              linkImagesToOriginal: false,
             },
           },
           {
@@ -89,9 +90,11 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + "/blog" + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + "/blog" + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }]
+                  url:
+                    site.siteMetadata.siteUrl + "/blog" + edge.node.fields.slug,
+                  guid:
+                    site.siteMetadata.siteUrl + "/blog" + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })
             },
@@ -121,9 +124,9 @@ module.exports = {
             match: "^/blog/",
             // optional configuration to specify external rss feed, such as feedburner
             // link: "https://feeds.feedburner.com/gatsby/blog"
-          }
-        ]
-      }
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
