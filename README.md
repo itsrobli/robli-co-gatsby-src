@@ -9,8 +9,15 @@
 # Notes for my future self
 
 Site is at: [https://robli.co](https://robli.co). It is hosted on GitHub Pages at [this repo](https://github.com/itsrobli/co-robli).
+The content is pushed automatically by GitHub Actions.
 
 ## Dev notes
+
+### CI/CD - GitHub Actions
+
+Pushes to `test` branch will trigger the test build which is accessed at [here](https://itsrobli.github.io/co-robli-dev/).
+
+### Other
 
 The site pretty much follows the standard Gatsby patterns [documented below](#original-creation). There are some deviations:
 
