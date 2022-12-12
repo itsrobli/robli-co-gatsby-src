@@ -94,27 +94,27 @@ module.exports = {
                     site.siteMetadata.siteUrl + "/blog" + edge.node.fields.slug,
                   guid:
                     site.siteMetadata.siteUrl + "/blog" + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })
             },
-            query: `{
-  allMdx(sort: {frontmatter: {date: DESC}}) {
-    edges {
-      node {
-        excerpt
-        html
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          date
-        }
-      }
-    }
-  }
-}`,
+            query: `
+            {
+              allMdx(sort: {frontmatter: {date: DESC}}) {
+                edges {
+                  node {
+                    excerpt
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            }
+            `,
             output: "/rss.xml",
             title: "Rob Li.co RSS Feed",
             // optional configuration to insert feed reference in pages:

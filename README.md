@@ -34,6 +34,7 @@ The site pretty much follows the standard Gatsby patterns [documented below](#or
 - [ ] Test if code CSS styles (and prismjs) are working properly by writing a blog post about building the 2.0.0 version of my website.
 - [ ] Learn to write tests in a Gatsby project and then write some.
 - [ ] Remove redundant CSS.
+- [ ] RSS feed `allMdx` graphql query doesn't have the `html` field anymore. Investigate why - maybe not supported? ([here](https://www.gatsbyjs.com/plugins/gatsby-plugin-feed/?=gatsby-plugin-feed))
 
 
 # Original creation
