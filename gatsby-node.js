@@ -14,6 +14,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
       {
         posts: allMdx(
+          filter: {fields: {source: {eq: "blog"}}}
           sort: { frontmatter: { date: DESC } }
         ) {
           nodes {
@@ -25,6 +26,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
         photos: allMdx(
+          filter: {fields: {source: {eq: "photos"}}}
           sort: [{ frontmatter: { id: ASC } }, { frontmatter: { date: ASC } }]
         ) {
           nodes {
@@ -50,8 +52,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.posts.nodes.filter(node => node.fields.source === 'blog')
-  const photos = result.data.photos.nodes.filter(node => node.fields.source === 'photos')
+  const posts = result.data.posts.nodes
+  const photos = result.data.photos.nodes
 
 
   // Create blog posts pages
@@ -146,6 +148,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
 
     type Fields {
+      source: String
       slug: String
     }
   `)
