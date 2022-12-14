@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { TitleHeader } from "../components/custom-styled-components"
 
 const BlogIndex = ({ data, location }) => {
@@ -13,7 +13,7 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
+        <Seo title="All posts" />
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
@@ -26,7 +26,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All blog posts" />
+      <Seo title="All blog posts" />
       <TitleHeader>Blog Posts</TitleHeader>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {

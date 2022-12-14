@@ -9,7 +9,7 @@ import {
 import { Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
 import { GatsbyImage } from "gatsby-plugin-image";
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 
 const PhotosList = ({ data, location }) => {
@@ -18,7 +18,7 @@ const PhotosList = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Photos" />
+      <Seo title="Photos" />
         <TitleHeader>Photos</TitleHeader>
         <Row>
           {photosManifest.map((photoCollection, key) => {

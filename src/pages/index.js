@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { Col, Row } from "react-bootstrap"
 
 const BlogIndex = ({ data, location }) => {
@@ -10,7 +10,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Home" />
+      <Seo title="Home" />
 
       <section>
 
