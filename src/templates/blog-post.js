@@ -67,7 +67,7 @@ const BlogPostTemplate = ({ data, location, children }) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
+  query BlogPostTemplate(
     $id: String!
     $previousPostId: String
     $nextPostId: String
