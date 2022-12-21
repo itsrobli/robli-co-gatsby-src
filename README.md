@@ -9,8 +9,15 @@
 # Notes for my future self
 
 Site is at: [https://robli.co](https://robli.co). It is hosted on GitHub Pages at [this repo](https://github.com/itsrobli/co-robli).
+The content is pushed automatically by GitHub Actions.
 
 ## Dev notes
+
+### CI/CD - GitHub Actions
+
+Pushes to `test` branch will trigger the test build which is accessed at [here](https://itsrobli.github.io/co-robli-dev/).
+
+### Other
 
 The site pretty much follows the standard Gatsby patterns [documented below](#original-creation). There are some deviations:
 
@@ -27,6 +34,7 @@ The site pretty much follows the standard Gatsby patterns [documented below](#or
 - [ ] Test if code CSS styles (and prismjs) are working properly by writing a blog post about building the 2.0.0 version of my website.
 - [ ] Learn to write tests in a Gatsby project and then write some.
 - [ ] Remove redundant CSS.
+- [ ] RSS feed `allMdx` graphql query doesn't have the `html` field anymore. Investigate why - maybe not supported? ([here](https://www.gatsbyjs.com/plugins/gatsby-plugin-feed/?=gatsby-plugin-feed))
 
 
 # Original creation

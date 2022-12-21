@@ -14,27 +14,35 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
       {
         posts: allMdx(
-          filter: {fileAbsolutePath: {regex: "/content/blog/"}}, 
-          sort: {fields: [frontmatter___date], order: DESC}
+          filter: { fields: { source: { eq: "blog" } } }
+          sort: { frontmatter: { date: DESC } }
         ) {
           nodes {
             id
             fields {
+              source
               slug
+            }
+            internal {
+              contentFilePath
             }
           }
         }
         photos: allMdx(
-          filter: {fileAbsolutePath: {regex: "/content/photos/"}}, 
-          sort: {fields: [frontmatter___id, frontmatter___date], order: ASC}
+          filter: { fields: { source: { eq: "photos" } } }
+          sort: [{ frontmatter: { id: ASC } }, { frontmatter: { date: ASC } }]
         ) {
           nodes {
             id
             fields {
+              source
               slug
             }
             frontmatter {
               filesystem_directory
+            }
+            internal {
+              contentFilePath
             }
           }
         }
@@ -65,7 +73,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: `/blog${post.fields.slug}`,
-        component: blogPostTemplate,
+        component: `${blogPostTemplate}?__contentFilePath=${post.internal.contentFilePath}`,
         context: {
           id: post.id,
           previousPostId,
@@ -83,7 +91,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: `/photos${photo.fields.slug}`,
-        component: photoCollectionTemplate,
+        component: `${photoCollectionTemplate}?__contentFilePath=${photo.internal.contentFilePath}`,
         context: {
           id: photo.id,
           previousPhotoId,
@@ -146,6 +154,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
 
     type Fields {
+      source: String
       slug: String
     }
   `)

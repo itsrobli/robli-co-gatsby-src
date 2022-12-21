@@ -18,7 +18,7 @@ const Navbar = () => {
           <Link to="/photos">Photos</Link>
         </CustomNavUlLi>
         <CustomNavUlLi>
-          <Link to="https://github.com/itsrobli">Code</Link>
+          <a href="https://github.com/itsrobli">Code</a>
         </CustomNavUlLi>
         <CustomNavUlLi>
           <Link to="/about">About</Link>

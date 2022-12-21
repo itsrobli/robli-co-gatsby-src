@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import { TitleHeader } from "../components/custom-styled-components"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Bio from "../../src/components/bio"
 import { Col, Row } from "react-bootstrap"
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -16,7 +16,7 @@ const About = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   return (
       <Layout location={location} title={siteTitle}>
-        <SEO title="About" />
+        <Seo title="About" />
         <TitleHeader>About</TitleHeader>
         <Bio />
         <h2>Personal projects</h2>
