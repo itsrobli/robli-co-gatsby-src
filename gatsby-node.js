@@ -14,7 +14,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
       {
         posts: allMdx(
-          filter: {fields: {source: {eq: "blog"}}}
+          filter: { fields: { source: { eq: "blog" } } }
           sort: { frontmatter: { date: DESC } }
         ) {
           nodes {
@@ -23,10 +23,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               source
               slug
             }
+            internal {
+              contentFilePath
+            }
           }
         }
         photos: allMdx(
-          filter: {fields: {source: {eq: "photos"}}}
+          filter: { fields: { source: { eq: "photos" } } }
           sort: [{ frontmatter: { id: ASC } }, { frontmatter: { date: ASC } }]
         ) {
           nodes {
@@ -37,6 +40,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             frontmatter {
               filesystem_directory
+            }
+            internal {
+              contentFilePath
             }
           }
         }
@@ -67,7 +73,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: `/blog${post.fields.slug}`,
-        component: blogPostTemplate,
+        component: `${blogPostTemplate}?__contentFilePath=${post.internal.contentFilePath}`,
         context: {
           id: post.id,
           previousPostId,
@@ -85,7 +91,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: `/photos${photo.fields.slug}`,
-        component: photoCollectionTemplate,
+        component: `${photoCollectionTemplate}?__contentFilePath=${photo.internal.contentFilePath}`,
         context: {
           id: photo.id,
           previousPhotoId,
