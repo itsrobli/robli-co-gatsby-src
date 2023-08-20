@@ -2,7 +2,7 @@
   "name": "robli-co-gatsby-src",
   "private": true,
   "description": "robli.co powered by Gatsby and Markdown based on gatsby-starter-blog",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "author": "Robert Li <robertwli@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
@@ -42,7 +42,7 @@
   "devDependencies": {
     "prettier": "^3.0.2"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://robli.co",
   "keywords": [
     "gatsby"
   ],
@@ -50,7 +50,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/itsrobli/robli-co-gatsby-src.git"
   },
   "scripts": {
     "build": "gatsby build",
